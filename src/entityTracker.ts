@@ -93,11 +93,11 @@ export class EntityTracker {
           this.trackingData[entityId].info.tickInfo[this.trackingData[entityId].info.tickInfo.length - 1].position
         );
 
-        if (shiftPos.equals(emptyVec)) {
-          this.trackingData[entityId].info.tickInfo = [{ position: currentPos, velocity: entity.velocity.clone() }];
-          this.trackingData[entityId].info.avgSpeed = emptyVec;
-          continue;
-        }
+        // if (shiftPos.equals(emptyVec)) {
+        //   this.trackingData[entityId].info.tickInfo = [{ position: currentPos, velocity: entity.velocity.clone() }];
+        //   this.trackingData[entityId].info.avgSpeed = emptyVec;
+        //   continue;
+        // }
 
         if (!shiftPos.equals(emptyVec) && !this.trackingData[entityId].info.avgSpeed.equals(emptyVec)) {
           const oldYaw = dirToYawAndPitch(this.trackingData[entityId].info.avgSpeed).yaw;
